@@ -1,40 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>https://mikeburghallblog.github.io/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Michael Burghall Blog</title>
+    <link>https://example.com/</link>
+    <description>Recent content on Michael Burghall Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jun 2021 23:07:01 +0100</lastBuildDate><atom:link href="https://mikeburghallblog.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test1</title>
-      <link>https://mikeburghallblog.github.io/posts/test1/</link>
-      <pubDate>Thu, 03 Jun 2021 23:07:01 +0100</pubDate>
-      
-      <guid>https://mikeburghallblog.github.io/posts/test1/</guid>
-      <description>
-        
-          &lt;p&gt;I am another page&lt;/p&gt;
-
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Test this</title>
-      <link>https://mikeburghallblog.github.io/posts/test/</link>
-      <pubDate>Thu, 03 Jun 2021 23:01:49 +0100</pubDate>
-      
-      <guid>https://mikeburghallblog.github.io/posts/test/</guid>
-      <description>
-        
-          &lt;p&gt;I am test text and I have changed&lt;/p&gt;
-&lt;p&gt;More text here to test&lt;/p&gt;
-
-        
-      </description>
-    </item>
-    
+    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

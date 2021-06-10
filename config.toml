@@ -1,5 +1,9 @@
 baseURL = "https://mikeburghallblog.github.io/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+paginate = 10
 theme = "hugo-clarity"
 publishDir = "docs"
+
+
+
+
