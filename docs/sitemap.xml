@@ -2,35 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mikeburghallblog.github.io/about/</loc>
-    <lastmod>2021-06-05T00:41:24+01:00</lastmod>
-  </url><url>
     <loc>https://mikeburghallblog.github.io/</loc>
-    <lastmod>2021-06-05T00:29:16+01:00</lastmod>
-  </url><url>
-    <loc>https://mikeburghallblog.github.io/post/azure/</loc>
-    <lastmod>2021-06-05T00:29:16+01:00</lastmod>
-  </url><url>
-    <loc>https://mikeburghallblog.github.io/post/azure1/</loc>
-    <lastmod>2021-06-05T00:29:16+01:00</lastmod>
+    <lastmod>2021-06-10T00:29:16+01:00</lastmod>
   </url><url>
     <loc>https://mikeburghallblog.github.io/categories/</loc>
-    <lastmod>2021-06-05T00:29:16+01:00</lastmod>
+    <lastmod>2021-06-10T00:29:16+01:00</lastmod>
+  </url><url>
+    <loc>https://mikeburghallblog.github.io/tags/getting-things-done/</loc>
+    <lastmod>2021-06-10T00:29:16+01:00</lastmod>
   </url><url>
     <loc>https://mikeburghallblog.github.io/post/</loc>
-    <lastmod>2021-06-05T00:29:16+01:00</lastmod>
-  </url><url>
-    <loc>https://mikeburghallblog.github.io/tags/tag_name1/</loc>
-    <lastmod>2021-06-05T00:29:16+01:00</lastmod>
-  </url><url>
-    <loc>https://mikeburghallblog.github.io/tags/tag_name2/</loc>
-    <lastmod>2021-06-05T00:29:16+01:00</lastmod>
+    <lastmod>2021-06-10T00:29:16+01:00</lastmod>
   </url><url>
     <loc>https://mikeburghallblog.github.io/tags/</loc>
-    <lastmod>2021-06-05T00:29:16+01:00</lastmod>
+    <lastmod>2021-06-10T00:29:16+01:00</lastmod>
   </url><url>
-    <loc>https://mikeburghallblog.github.io/categories/technology/</loc>
-    <lastmod>2021-06-05T00:29:16+01:00</lastmod>
+    <loc>https://mikeburghallblog.github.io/post/the_importance_of_picking_up_the_phone/</loc>
+    <lastmod>2021-06-10T00:29:16+01:00</lastmod>
+  </url><url>
+    <loc>https://mikeburghallblog.github.io/categories/ways-of-working/</loc>
+    <lastmod>2021-06-10T00:29:16+01:00</lastmod>
+  </url><url>
+    <loc>https://mikeburghallblog.github.io/about/</loc>
+    <lastmod>2021-06-05T00:41:24+01:00</lastmod>
   </url><url>
     <loc>https://mikeburghallblog.github.io/series/</loc>
   </url>
