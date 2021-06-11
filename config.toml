@@ -1,4 +1,4 @@
-baseURL = "https://mikeburghallblog.github.io/"
+baseURL = "https://michaelburghall.com/"
 languageCode = "en-us"
 paginate = 10
 theme = "hugo-clarity"
