@@ -1,5 +1,5 @@
 ---
-title: "The Importance of Picking Up the Phone" # Title of the blog post.
+title: "The Importance of Calling" # Title of the blog post.
 date: 2021-06-10T00:29:16+01:00 # Date of post creation.
 description: "Simple actions make effective results" # Description used for search engine.
 featured: true # Sets if post is a featured post, making appear on the home page side bar.
@@ -18,4 +18,6 @@ tags:
   - Getting things done
 # comment: false # Disable comment if false.
 ---
+Firstly, what do I mean by 'The Importance of Calling' - this is simply the action of picking up the phone, hitting call on Slack, Teams or whatever is your flavour and speaking to people to resolve a problem. 
+
 
