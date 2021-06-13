@@ -18,6 +18,12 @@ tags:
   - Getting things done
 # comment: false # Disable comment if false.
 ---
-Firstly, what do I mean by 'The Importance of Calling' - this is simply the action of picking up the phone, hitting call on Slack, Teams or whatever is your flavour and speaking to people to resolve a problem. 
+Firstly, what do I mean by 'The Importance of Calling' - this is simply the action of picking up the phone, hitting call on Slack, Teams or whatever is your flavour and speaking to people. 
 
+This always sounds so simple and I debated whether it made a good post - but so many times have I come across chains of emails or messages trying to achieve something like resolve a technical issue or clarify a point. I always find just hitting call and speaking cuts down all the noise and resolves the issue in far less time.
 
+So often people send an email and push the problem to someone else or delay it, but this doesn't gain anything.
+
+When asked people often people say 'I sent an email because I needed it documented', but if you get something resolved or agreed asap, then you can capture it and document it after speaking to someone and send 'that email' as confirmation.
+
+Try it the next time you're going to type an email and see the results for yourself!
