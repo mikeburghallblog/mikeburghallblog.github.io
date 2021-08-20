@@ -18,4 +18,6 @@ tags:
   - Convert Azure tags into a usable format
 # comment: false # Disable comment if false.
 ---
-If you are using Power BI and 
+If you are using Power BI and pulling data from Azure Cost Management you will most likely want to extract data from tags created within Azure. This isn't as easy as it seems.
+
+![Edit Query](/static/power_bi/Edit_Query.PNG)
