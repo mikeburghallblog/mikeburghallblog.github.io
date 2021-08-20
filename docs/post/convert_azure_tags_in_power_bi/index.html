@@ -106,7 +106,7 @@
 </svg></span>
     <span class="post_date">
       Aug 10, 2021</span>
-    <span class="post_time"> · 1 min read</span><span>&nbsp;· <a href='https://michaelburghall.com/tags/convert-azure-tags-into-a-usable-format' title="Convert Azure tags into a usable format" class="post_tag button button_translucent">Convert Azure tags into a usable format
+    <span class="post_time"> · 2 min read</span><span>&nbsp;· <a href='https://michaelburghall.com/tags/convert-azure-tags-into-a-usable-format' title="Convert Azure tags into a usable format" class="post_tag button button_translucent">Convert Azure tags into a usable format
         </a>
     </span>
     <span class="page_only">&nbsp;·
@@ -138,7 +138,43 @@
 
     
     <p>If you are using Power BI and pulling data from Azure Cost Management you will most likely want to extract data from tags created within Azure. This isn't as easy as it seems.</p>
+<p>Assuming you are familiar with Power BI and have imported data from Azure Cost Management  - here are the steps to making them usable;</p>
+<ol>
+<li>Edit the query for the data set that contains the tags such as 'Usage details'.</li>
+</ol>
 <p><img src="/images/power_bi/Edit_Query.PNG" alt="Edit Query"></p>
+<ol start="2">
+<li>Add a Custom Column to the dataset.</li>
+</ol>
+<p><img src="/images/power_bi/Add_Custom_Column.PNG" alt="Add Custom Column"></p>
+<ol start="3">
+<li>Give the column a name and add { and } around the Tags column for the formula as shown in the diagram below (this is to make it a proper JSON type).</li>
+</ol>
+<p><img src="/images/power_bi/Custom_Column_Formula.PNG" alt="Custom Column Formula"></p>
+<ol start="4">
+<li>Find the new custom column, right click the column header and select Transform and then JSON.</li>
+</ol>
+<p><img src="/images/power_bi/Transform.PNG" alt="Transform to JSON"></p>
+<ol start="5">
+<li>Expand the JSON records now in the column to select the tags.</li>
+</ol>
+<p><img src="/images/power_bi/Expand_Record.PNG" alt="Expand Records"></p>
+<ol start="6">
+<li>Select the tags you want to be able to use and click OK. Note this takes a while to load and may not load all possible values, if this is the case click on the 'Load more' link.</li>
+</ol>
+<p><img src="/images/power_bi/Select_Tags.PNG" alt="Select Tags"></p>
+<ol start="7">
+<li>The selected tags appear as new columns in the dataset, with the column name the tag key and the tag values as the column values.</li>
+</ol>
+<p><img src="/images/power_bi/New_Columns.PNG" alt="New Columns"></p>
+<ol start="8">
+<li>Close and apply the changes to the dataset. Once done the dataset fully reloads which may take a while.</li>
+</ol>
+<p><img src="/images/power_bi/Close_and_Apply.PNG" alt="Close and Apply"></p>
+<ol start="9">
+<li>The columns are now usable columns within the dataset.</li>
+</ol>
+<p><img src="/images/power_bi/Usable_Columns.PNG" alt="Usable Columns"></p>
 
 
   </article>
