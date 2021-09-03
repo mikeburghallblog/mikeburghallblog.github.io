@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Power BI on MB Blog</title>
-    <link>https://michaelburghall.com/categories/power-bi/</link>
-    <description>Recent content in Power BI on MB Blog</description>
+    <title>Azure Cost Management data connector month&#39;s of data issues on MB Blog</title>
+    <link>https://michaelburghall.com/tags/azure-cost-management-data-connector-months-of-data-issues/</link>
+    <description>Recent content in Azure Cost Management data connector month&#39;s of data issues on MB Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 03 Sep 2021 18:00:01 +0100</lastBuildDate><atom:link href="https://michaelburghall.com/categories/power-bi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Sep 2021 18:00:01 +0100</lastBuildDate><atom:link href="https://michaelburghall.com/tags/azure-cost-management-data-connector-months-of-data-issues/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure Cost Management Power BI Multiple Months Issue</title>
       <link>https://michaelburghall.com/post/azure_cost_management_power_bi_multiple_months_issue/</link>
@@ -56,57 +56,6 @@ riusagesummary = Table.Combine({riusagesummary1, riusagesummary2, riusagesummary
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;in
 riusagesummary&lt;/p&gt;
-
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Convert Azure tags in Power BI</title>
-      <link>https://michaelburghall.com/post/convert_azure_tags_in_power_bi/</link>
-      <pubDate>Tue, 10 Aug 2021 20:24:16 +0100</pubDate>
-      
-      <guid>https://michaelburghall.com/post/convert_azure_tags_in_power_bi/</guid>
-      <description>
-        
-          &lt;p&gt;If you are using Power BI and pulling data from Azure Cost Management you will most likely want to extract data from tags created within Azure. This isn&#39;t as easy as it seems.&lt;/p&gt;
-&lt;p&gt;Assuming you are familiar with Power BI and have imported data from Azure Cost Management  - here are the steps to making them usable;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Edit the query for the data set that contains the tags such as &#39;Usage details&#39;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://michaelburghall.com/images/power_bi/Edit_Query.PNG&#34; alt=&#34;Edit Query&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;Add a Custom Column to the dataset.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://michaelburghall.com/images/power_bi/Add_Custom_Column.PNG&#34; alt=&#34;Add Custom Column&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;Give the column a name and add { and } around the Tags column for the formula as shown in the diagram below (this is to make it a proper JSON type).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://michaelburghall.com/images/power_bi/Custom_Column_Formula.PNG&#34; alt=&#34;Custom Column Formula&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;Find the new custom column, right click the column header and select Transform and then JSON.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://michaelburghall.com/images/power_bi/Transform.PNG&#34; alt=&#34;Transform to JSON&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;Expand the JSON records now in the column to select the tags.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://michaelburghall.com/images/power_bi/Expand_Record.PNG&#34; alt=&#34;Expand Records&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;Select the tags you want to be able to use and click OK. Note this takes a while to load and may not load all possible values, if this is the case click on the &#39;Load more&#39; link.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://michaelburghall.com/images/power_bi/Select_Tags.PNG&#34; alt=&#34;Select Tags&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;7&#34;&gt;
-&lt;li&gt;The selected tags appear as new columns in the dataset, with the column name the tag key and the tag values as the column values.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://michaelburghall.com/images/power_bi/New_Columns.PNG&#34; alt=&#34;New Columns&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;8&#34;&gt;
-&lt;li&gt;Close and apply the changes to the dataset. Once done the dataset fully reloads which may take a while.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://michaelburghall.com/images/power_bi/Close_and_Apply.PNG&#34; alt=&#34;Close and Apply&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;9&#34;&gt;
-&lt;li&gt;The columns are now usable columns within the dataset.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://michaelburghall.com/images/power_bi/Usable_Columns.PNG&#34; alt=&#34;Usable Columns&#34;&gt;&lt;/p&gt;
 
         
       </description>

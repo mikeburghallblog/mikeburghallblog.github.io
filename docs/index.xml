@@ -7,7 +7,60 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 10 Aug 2021 20:24:16 +0100</lastBuildDate><atom:link href="https://michaelburghall.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Sep 2021 18:00:01 +0100</lastBuildDate><atom:link href="https://michaelburghall.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Cost Management Power BI Multiple Months Issue</title>
+      <link>https://michaelburghall.com/post/azure_cost_management_power_bi_multiple_months_issue/</link>
+      <pubDate>Fri, 03 Sep 2021 18:00:01 +0100</pubDate>
+      
+      <guid>https://michaelburghall.com/post/azure_cost_management_power_bi_multiple_months_issue/</guid>
+      <description>
+        
+          &lt;p&gt;If you are using Power BI and pulling data from Azure Cost Management you will most likely want to pull in multiple months worth of data. This usually is fine, however there can sometimes be issues, in particular with RI Usage Summary. In this case we need to implement a workaround.&lt;/p&gt;
+&lt;p&gt;Assuming you are familiar with Power BI and have imported data from Azure Cost Management  - here are the steps to resolving the issue with pulling in multiple months of data;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Edit the query for the data set that contains the tags such as &#39;Usage details&#39;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://michaelburghall.com/images/power_bi/date_issue/Edit_Query.PNG&#34; alt=&#34;Edit Query&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Click the Advanced Editor.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://michaelburghall.com/images/power_bi/date_issue/Advanced_Editor.PNG&#34; alt=&#34;Advanced Editor&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;This will probably look like the below, where the 6 on the second row is the number of month&#39;s of data being retrieved. Note the enrollmentNumber has been obfuscated.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://michaelburghall.com/images/power_bi/date_issue/Standard_Data_Retrieval.PNG&#34; alt=&#34;Standard Data Retrieval&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Change the query to the below. This gets the data in 3 steps of 6 to 3 months ago, 3 to 1 months ago and 1 month ago to now. change these numbers to suit. Note the maximum is 3 months per step, you can replicate a step to get more than 6 month&#39;s of data. The text is at the botom of the page for you to copy and paste.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://michaelburghall.com/images/power_bi/date_issue/Updated_Data_Retrieval.PNG&#34; alt=&#34;Updated Data Retrieval&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Once updated click &#39;Done&#39; to update the query, and then click &#39;Close &amp;amp; Apply&#39;. You can then refresh the data to pull back the multiple months data without issues.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://michaelburghall.com/images/power_bi/date_issue/Close_and_Apply.PNG&#34; alt=&#34;Close and Apply&#34;&gt;&lt;/p&gt;
+&lt;p&gt;let
+enrollmentNumber = &amp;quot;XXXX&amp;quot;,
+optionalParameters1 = [startBillingDataWindow = &amp;quot;-6&amp;quot;, endBillingDataWindow = &amp;quot;-3&amp;quot;],
+source1 = AzureCostManagement.Tables(&amp;quot;Enrollment Number&amp;quot;, enrollmentNumber, 3, optionalParameters1),
+riusagesummary1 = source1{[Key=&amp;quot;riusagesummary&amp;quot;]}[Data],
+optionalParameters2 = [startBillingDataWindow = &amp;quot;-3&amp;quot;, endBillingDataWindow = &amp;quot;-1&amp;quot;],
+source2 = AzureCostManagement.Tables(&amp;quot;Enrollment Number&amp;quot;, enrollmentNumber, 3, optionalParameters2), &lt;br&gt;
+riusagesummary2 = source2{[Key=&amp;quot;riusagesummary&amp;quot;]}[Data],&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;optionalParameters3 = [startBillingDataWindow = &amp;quot;-1&amp;quot;, endBillingDataWindow = &amp;quot;0&amp;quot;],
+source3 = AzureCostManagement.Tables(&amp;quot;Enrollment Number&amp;quot;, enrollmentNumber, 3, optionalParameters3),
+riusagesummary3 = source3{[Key=&amp;quot;riusagesummary&amp;quot;]}[Data],
+
+
+
+riusagesummary = Table.Combine({riusagesummary1, riusagesummary2, riusagesummary3})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;in
+riusagesummary&lt;/p&gt;
+
+        
+      </description>
+    </item>
+    
     <item>
       <title>Convert Azure tags in Power BI</title>
       <link>https://michaelburghall.com/post/convert_azure_tags_in_power_bi/</link>
