@@ -44,21 +44,19 @@ Assuming you are familiar with Power BI and have imported data from Azure Cost M
 ![Close and Apply](/images/power_bi/date_issue/Close_and_Apply.PNG)
 
 
-let
-    enrollmentNumber = "XXXX",
-    optionalParameters1 = [startBillingDataWindow = "-6", endBillingDataWindow = "-3"],
-    source1 = AzureCostManagement.Tables("Enrollment Number", enrollmentNumber, 3, optionalParameters1),
-    riusagesummary1 = source1{[Key="riusagesummary"]}[Data],
-    optionalParameters2 = [startBillingDataWindow = "-3", endBillingDataWindow = "-1"],
-    source2 = AzureCostManagement.Tables("Enrollment Number", enrollmentNumber, 3, optionalParameters2),    
-    riusagesummary2 = source2{[Key="riusagesummary"]}[Data],
+    let
+        enrollmentNumber = "XXXX",
+        optionalParameters1 = [startBillingDataWindow = "-6", endBillingDataWindow = "-3"],
+        source1 = AzureCostManagement.Tables("Enrollment Number", enrollmentNumber, 3, optionalParameters1),
+        riusagesummary1 = source1{[Key="riusagesummary"]}[Data],
+        optionalParameters2 = [startBillingDataWindow = "-3", endBillingDataWindow = "-1"],
+        source2 = AzureCostManagement.Tables("Enrollment Number", enrollmentNumber, 3, optionalParameters2),    
+        riusagesummary2 = source2{[Key="riusagesummary"]}[Data],
 
-    optionalParameters3 = [startBillingDataWindow = "-1", endBillingDataWindow = "0"],
-    source3 = AzureCostManagement.Tables("Enrollment Number", enrollmentNumber, 3, optionalParameters3),
-    riusagesummary3 = source3{[Key="riusagesummary"]}[Data],
+        optionalParameters3 = [startBillingDataWindow = "-1", endBillingDataWindow = "0"],
+        source3 = AzureCostManagement.Tables("Enrollment Number", enrollmentNumber, 3, optionalParameters3),
+        riusagesummary3 = source3{[Key="riusagesummary"]}[Data],
 
-
-
-    riusagesummary = Table.Combine({riusagesummary1, riusagesummary2, riusagesummary3})
-in
-    riusagesummary
+        riusagesummary = Table.Combine({riusagesummary1, riusagesummary2, riusagesummary3})
+    in
+        riusagesummary

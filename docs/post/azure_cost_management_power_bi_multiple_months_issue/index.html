@@ -159,24 +159,23 @@
 <li>Once updated click 'Done' to update the query, and then click 'Close &amp; Apply'. You can then refresh the data to pull back the multiple months data without issues.</li>
 </ol>
 <p><img src="/images/power_bi/date_issue/Close_and_Apply.PNG" alt="Close and Apply"></p>
-<p>let
-enrollmentNumber = &quot;XXXX&quot;,
-optionalParameters1 = [startBillingDataWindow = &quot;-6&quot;, endBillingDataWindow = &quot;-3&quot;],
-source1 = AzureCostManagement.Tables(&quot;Enrollment Number&quot;, enrollmentNumber, 3, optionalParameters1),
-riusagesummary1 = source1{[Key=&quot;riusagesummary&quot;]}[Data],
-optionalParameters2 = [startBillingDataWindow = &quot;-3&quot;, endBillingDataWindow = &quot;-1&quot;],
-source2 = AzureCostManagement.Tables(&quot;Enrollment Number&quot;, enrollmentNumber, 3, optionalParameters2), <br>
-riusagesummary2 = source2{[Key=&quot;riusagesummary&quot;]}[Data],</p>
-<pre><code>optionalParameters3 = [startBillingDataWindow = &quot;-1&quot;, endBillingDataWindow = &quot;0&quot;],
-source3 = AzureCostManagement.Tables(&quot;Enrollment Number&quot;, enrollmentNumber, 3, optionalParameters3),
-riusagesummary3 = source3{[Key=&quot;riusagesummary&quot;]}[Data],
+<pre><code>let
+    enrollmentNumber = &quot;XXXX&quot;,
+    optionalParameters1 = [startBillingDataWindow = &quot;-6&quot;, endBillingDataWindow = &quot;-3&quot;],
+    source1 = AzureCostManagement.Tables(&quot;Enrollment Number&quot;, enrollmentNumber, 3, optionalParameters1),
+    riusagesummary1 = source1{[Key=&quot;riusagesummary&quot;]}[Data],
+    optionalParameters2 = [startBillingDataWindow = &quot;-3&quot;, endBillingDataWindow = &quot;-1&quot;],
+    source2 = AzureCostManagement.Tables(&quot;Enrollment Number&quot;, enrollmentNumber, 3, optionalParameters2),    
+    riusagesummary2 = source2{[Key=&quot;riusagesummary&quot;]}[Data],
 
+    optionalParameters3 = [startBillingDataWindow = &quot;-1&quot;, endBillingDataWindow = &quot;0&quot;],
+    source3 = AzureCostManagement.Tables(&quot;Enrollment Number&quot;, enrollmentNumber, 3, optionalParameters3),
+    riusagesummary3 = source3{[Key=&quot;riusagesummary&quot;]}[Data],
 
-
-riusagesummary = Table.Combine({riusagesummary1, riusagesummary2, riusagesummary3})
+    riusagesummary = Table.Combine({riusagesummary1, riusagesummary2, riusagesummary3})
+in
+    riusagesummary
 </code></pre>
-<p>in
-riusagesummary</p>
 
 
   </article>
