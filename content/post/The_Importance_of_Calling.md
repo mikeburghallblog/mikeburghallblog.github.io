@@ -26,4 +26,4 @@ So often people send an email and push the problem to someone else or delay it, 
 
 When asked people often people say 'I sent an email because I needed it documented', but if you get something resolved or agreed asap, then you can capture it and document it after speaking to someone and send 'that email' as confirmation.
 
-Try it the next time you're going to type an email and see the results for yourself!
+Try it the next time you're going to type an email and see the results for yourself!!
